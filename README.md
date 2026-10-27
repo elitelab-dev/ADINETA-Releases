@@ -33,6 +33,4 @@ The release page publishes the archive SHA-256 in a separate checksum file. Veri
 
 Use only on owned or explicitly authorized systems. Reports may contain addresses, port states, service observations, timestamps, and probe metadata. Keep the included binary license, third-party notices, and license texts with the distribution.
 
-A low-risk residual static-marker finding is documented and accepted for v1.0.0; no sensitive-data access, unauthorized communication, or disclosure was demonstrated. This is not a zero-vulnerability guarantee.
-
 See [INSTALL.md](INSTALL.md) for installation, removal, and troubleshooting details.
