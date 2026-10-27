@@ -1,0 +1,20 @@
+ADINETA 1.0.0 Standard - Binary Use License
+Copyright (c) 2026 Elite Lab. All rights reserved.
+
+License grant:
+Elite Lab grants a non-exclusive, royalty-free permission to download, install,
+and run the unmodified Linux executable for personal, educational, and internal
+commercial use on systems and networks the user is authorized to test. This
+Standard edition has no evaluation time limit.
+
+No source code is provided. No ownership of the source or software is transferred.
+Redistribution, resale, sublicensing, modification, and publication of the software
+require prior written permission from Elite Lab, except where applicable law or
+third-party license terms grant rights that cannot be restricted by this notice.
+
+The software is provided "as is", without warranties, to the extent permitted
+by applicable law. Liability is limited to the extent permitted by applicable law.
+
+Third-party components remain subject to their own licenses in
+THIRD_PARTY_NOTICES.txt and licenses/. Those terms take precedence for their
+respective components. This notice makes no claim of registered trademark status.

@@ -1,0 +1,39 @@
+ADINETA Standard — third-party component notices
+
+This notice accompanies the license texts in licenses/. ADINETA's proprietary
+license does not replace or restrict rights under those licenses.
+
+Current runtime reviewed for candidate distribution: CPython 3.12.15. Its built-in modules
+include OpenSSL 3.5.9, SQLite 3.53.1, Expat 2.9.0, zlib 1.3.2, mpdecimal 4.0.0,
+and code from bzip2, liblzma, libffi, libedit, ncurses/panel and libuuid.
+Python and its incorporated code: licenses/LICENSE.python.txt.
+Other components: the corresponding LICENSE.*.txt files in licenses/.
+Nuitka 4.3 runtime code and exception: licenses/LICENSE.nuitka-runtime.txt.
+The complete Nuitka 4.3 license and notice are included as
+licenses/LICENSE.nuitka-4.3.txt and licenses/NOTICE.nuitka-4.3.txt.
+This software includes code from XZ Utils <https://tukaani.org/xz/>.
+
+Some native dependency versions/provenance remain unverified. The license texts
+retrieved from the runtime provider are references pinned in license-sources.json
+in the private source repository; they are not proof of the exact final build.
+Reconcile all components and copyrights with the final runtime before approval.
+
+The proposed distribution does not include the build environments or development
+tools. System glibc libraries are dependencies supplied by the operating system.
+Optional _dbm/Berkeley DB and Tcl/Tk/X11 components present in the build environment
+are not approved distribution files. Do not include them without a separate review.
+
+Candidate notice — exact native provider provenance remains documented as unresolved
+in RUNTIME_SBOM.md; this file is not a legal approval by itself.
+
+The Nuitka compiler, pip 26.2.1, ordered-set, zstandard and patchelf are build
+tools, not proposed runtime distribution files. pip 26.2.1 vendors urllib3
+2.7.0. The affected advisories are GHSA-8988-9cw3-xx77, GHSA-vxq7-64xx-v4gw
+and GHSA-gh4c-6fx4-qh6g; urllib3 2.8.0 is the documented fix. Updating an
+external urllib3 does not replace pip._vendor.urllib3. No fixed pip release
+with a 2.8.0 vendor is evidenced in the reviewed sources, so pip remains an
+isolated build-only tool and is explicitly excluded from the Standard build.
+Do not ship pip or its vendored packages. Their licenses must be reviewed again
+if distribution contents change. The Nuitka runtime exception applies to the
+compiled output; it does not relicense the compiler itself. This inventory does
+not establish the provenance of native code statically linked into libpython.
