@@ -1,36 +1,36 @@
-# ADINETA Standard v1.0.0
+# ADINETA Standard v1.0.1
 
-ADINETA is a standalone Linux x86_64 IPv4 network-reconnaissance tool for systems and networks that you own or are explicitly authorized to test.
+ADINETA is a standalone Linux x86_64 IPv4 network-reconnaissance tool by ELITE LAB Works. Use it only on systems and networks that you own or are explicitly authorized to test.
 
-## Install
+## Installation
 
-Run the public installer:
+Use the release installer from the v1.0.1 GitHub Release:
 
 ```sh
-curl -fsSL https://github.com/elitelab-dev/ADINETA-Releases/releases/download/v1.0.0/install.sh | sh
+curl -fsSL https://github.com/elitelab-dev/ADINETA-Releases/releases/download/v1.0.1/install.sh | sh
 ```
 
-The installer downloads the release asset over HTTPS, verifies its SHA-256, installs under `~/.local/share/adineta/v1.0.0`, and exposes the command at `~/.local/bin/adineta` without requiring root. Add `~/.local/bin` to `PATH` if necessary.
+The installer requires Linux x86_64 and glibc 2.34 or newer, downloads over HTTPS, verifies SHA-256, and installs without `sudo` under `~/.local/share/adineta/1.0.1`. Add `~/.local/bin` to `PATH` if needed.
 
-## Run
+## Usage
 
 ```sh
 adineta --help
 adineta 127.0.0.1 --ports 1 --transport tcp --report terminal
 ```
 
-Supported release evidence includes TCP and UDP scanning, combined transport operation, explicit port lists, terminal/JSON/CSV reports, and local HTTP service detection.
+The release supports TCP, UDP and combined `both` transport scans, explicit ports and ranges, terminal/JSON/CSV reports, bounded timeouts, retries, concurrency controls, and supported service detection. Quick and Full presets are TCP-only; Custom Scan accepts `tcp`, `udp`, or `both`, with TCP as the default when Enter is pressed.
 
-## Compatibility
+The Custom Scan prompt is:
 
-Linux x86_64 on glibc-based distributions with glibc 2.34 or newer. This distribution is not a musl build and does not target other architectures.
+```text
+Transport (tcp/udp/both) [default: tcp]:
+```
 
-## Integrity
+## Integrity and legal notice
 
-The release page publishes the archive SHA-256 in a separate checksum file. Verify the archive before extraction.
+Verify the archive before extraction using the SHA-256 checksum published with the release. The v1.0.1 archive SHA-256 is recorded in the release checksum file.
 
-## Legal and privacy
+Use ADINETA only on owned or explicitly authorized systems. Reports can contain addresses, port states, service observations, timestamps, and probe metadata. Keep `LICENSE_BINARY.txt`, `THIRD_PARTY_NOTICES.txt`, and the `licenses/` directory with the distribution. See [README_AR.md](README_AR.md) for Arabic documentation and [INSTALL.md](INSTALL.md) for installation, update, and removal details.
 
-Use only on owned or explicitly authorized systems. Reports may contain addresses, port states, service observations, timestamps, and probe metadata. Keep the included binary license, third-party notices, and license texts with the distribution.
-
-See [INSTALL.md](INSTALL.md) for installation, removal, and troubleshooting details.
+ADINETA is proprietary software; source code is not included in this binary distribution.
